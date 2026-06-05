@@ -1,0 +1,17 @@
+{ "Projects": [
+    {
+        "id": "1",
+        "titulo": "Arreglo de computadoras:",
+        "descripcion": "Recientemente tuve que hacer un trabajo con unos compañeros de clase para hacerle mantenimiento a las computadoras de una biblioteca popular. Donde tuvimos que cambiar y limpiar los componentes, además de instalarles un nuevo sistema operativo."
+    },
+    {
+        "id": "2",
+        "titulo": "Un juego de esquiar",
+        "descripcion": "Para la matería de desarrollo tuve que crear un simulador de lo que yo quisiera, con mis compañeros hicimos un simulador de esqui en python, es un juego sin una interfaz gráfica, pero que cuenta con puntos, vida y dificultad."
+    },
+    {
+        "id": "3",
+        "titulo": "Instalación de sistema operativo",
+        "descripcion": "En 2024 tuve que hacer la instalación de dos sistemas operativos: windows 10 y linux mint para las computadoras de mi escuela."
+    }
+]}

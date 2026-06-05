@@ -1,0 +1,27 @@
+nav {
+    background-color: darkslategray;
+    border-radius: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 52px 32px;
+    gap: 10px;
+
+}
+
+a {
+    width: 7em;
+    padding-block: 1em;
+    font-size: 20px;
+    background-color: #7f77dd;
+    border-radius: 16px;
+    box-shadow: 0px 4px 6px black;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: grid;
+    place-items: center;
+    color: black;
+    font-weight: bold;
+}
