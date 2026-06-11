@@ -4,17 +4,34 @@
     height: 200px;
     display: flex;
     justify-content: center;
-   
+
 
 }
+
 img {
     width: 200px;
     height: 200px;
-     border-radius: 50%;
+    border-radius: 50%;
     object-fit: cover;
 
 }
+
 .Skills {
     display: flex;
-    float: left;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.Otras-Habilidades, .Habilidades-Proceso{
+    width: 100%;
+    display: grid;
+    place-items: center;
+
 }
