@@ -1,7 +1,7 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProyectosService } from '../../servicios/proyectos';
-//import { ProyectosService } from '../../servicios/proyectos';
+
 
 @Component({
   selector: 'app-proyectos',
@@ -11,14 +11,17 @@ import { ProyectosService } from '../../servicios/proyectos';
   styleUrl: './proyectos.css'
 })
 export class Proyectos {
-  proyectos = []
 
-  constructor(private proyectosService: ProyectosService) 
+ // proyectos: any = []
+  proyectosList: any
+  constructor(private proyectosService: ProyectosService, private cdr: ChangeDetectorRef) 
   {
     this.proyectosService.obteneProjectos().subscribe({
-      next: (data) => console.log(data),
+      next: (data) => { 
+      console.log(data)
+      this.proyectosList = data},
       error: (error) => console.error(error),
-      complete: () => console.info('complete')
+      complete: () => this.cdr.detectChanges()
     })
   }
-}
+} 

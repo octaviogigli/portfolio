@@ -1,15 +1,8 @@
 <h1>Mis proyectos recientes: </h1>
 <section>
-  <h2>Proyectos</h2>
+  @for (proyectos of proyectosList; track proyectos.id) {
 
-  <!-- @if (cargando) {
-  <p>Cargando proyectos...</p>
-  } -->
-
-  <!-- @for (project of proyectos; track $index) {
-  <div>
-    <h3>{{ project.titulo }}</h3>
-    <p>{{ project.descripcion }}</p>
-  </div>
-  } -->
+    <h4>{{proyectos.titulo}}</h4>
+    <p>{{proyectos.descripcion}}</p>
+  }
 </section>
