@@ -7,7 +7,7 @@ import { Component, ChangeDetectorRef } from '@angular/core';
   styleUrl: './contacto.css',
 })
 export class Contacto {
-      mostrarToast = false;
+  mostrarToast = false;
   private timer: any;
 
   constructor(private cdr: ChangeDetectorRef) {}

@@ -2,7 +2,9 @@
 <section>
   @for (proyectos of proyectosList; track proyectos.id) {
 
-    <h4>{{proyectos.titulo}}</h4>
+    <h2>{{proyectos.titulo}}</h2>
     <p>{{proyectos.descripcion}}</p>
+    <h4>Habilidades puestas en practica: </h4>
+    <p>{{proyectos.habilidadesUsadas}}</p>
   }
 </section>

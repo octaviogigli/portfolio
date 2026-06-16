@@ -11,8 +11,6 @@ import { ProyectosService } from '../../servicios/proyectos';
   styleUrl: './proyectos.css'
 })
 export class Proyectos {
-
- // proyectos: any = []
   proyectosList: any
   constructor(private proyectosService: ProyectosService, private cdr: ChangeDetectorRef) 
   {

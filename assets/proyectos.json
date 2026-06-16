@@ -1,17 +1,38 @@
-{ "Projects": [
+{ "Projects": [ 
     {
-        "id": "1",
-        "titulo": "Arreglo de computadoras:",
-        "descripcion": "Recientemente tuve que hacer un trabajo con unos compañeros de clase para hacerle mantenimiento a las computadoras de una biblioteca popular. Donde tuvimos que cambiar y limpiar los componentes, además de instalarles un nuevo sistema operativo."
+        "id":"1",
+        "titulo":"Portafolio web desarrollado con Angular",
+        "descripcion": "Desarrollé un portafolio web personal utilizando Angular con el objetivo de presentar mis proyectos, habilidades y experiencia de manera organizada. La aplicación cuenta con una interfaz responsiva, navegación entre secciones y componentes reutilizables para facilitar su mantenimiento y escalabilidad.",
+        "habilidadesUsadas": "Angular, TypeScript, HTML, CSS, diseño web responsivo."
     },
     {
         "id": "2",
-        "titulo": "Un juego de esquiar",
-        "descripcion": "Para la matería de desarrollo tuve que crear un simulador de lo que yo quisiera, con mis compañeros hicimos un simulador de esqui en python, es un juego sin una interfaz gráfica, pero que cuenta con puntos, vida y dificultad."
+        "titulo": "Mantenimiento y reacondicionamiento de computadoras",
+        "descripcion": "Participé en el mantenimiento integral de computadoras de una biblioteca popular. El proyecto incluyó limpieza de componentes internos, diagnóstico de hardware, reemplazo de piezas defectuosas e instalación de sistemas operativos para mejorar el rendimiento y prolongar la vida útil de los equipos.",
+        "habilidadesUsadas": "Diagnóstico de hardware, mantenimiento preventivo, instalación de sistemas operativos, trabajo en equipo."
     },
     {
         "id": "3",
-        "titulo": "Instalación de sistema operativo",
-        "descripcion": "En 2024 tuve que hacer la instalación de dos sistemas operativos: windows 10 y linux mint para las computadoras de mi escuela."
+        "titulo": "Simulador de esquí en Python",
+        "descripcion": "Desarrollé junto a compañeros un simulador de esquí utilizando Python. El programa incorpora un sistema de puntuación, niveles de dificultad, vidas y eventos aleatorios que afectan el desarrollo de la partida.",
+        "habilidadesUsadas": "Python, lógica de programación, estructuras de control, trabajo colaborativo."
+    },
+    {
+        "id": "4",
+        "titulo": "Migración e instalación de sistemas operativos",
+        "descripcion": "Realicé la instalación y configuración de Windows 10 y Linux Mint en equipos de una institución educativa. El proyecto incluyó preparación de medios de instalación, configuración inicial del sistema y verificación del correcto funcionamiento de los equipos.",
+        "habilidadesUsadas": "Administración básica de sistemas, instalación de software, configuración de equipos."
+    }, {
+        "id": "5",
+        "titulo": "Calculadora interactiva en javascript",
+        "descripcion": "Desarrollé una calculadora web utilizando HTML, CSS y JavaScript. La aplicación permite realizar operaciones matemáticas básicas mediante una interfaz intuitiva y dinámica, aplicando conceptos de manipulación del DOM y manejo de eventos." ,
+        "habilidadesUsadas": "JavaScript, HTML, CSS, lógica de programación, manipulación del DOM."
+
+    } ,
+    {
+        "id": "6",
+        "titulo": "Digitalización y preservación de fotografías",
+        "descripcion": "Participé en la digitalización de fotografías físicas con el objetivo de preservar y organizar material histórico. El proceso incluyó el escaneo de imágenes, la clasificación de archivos digitales y la optimización básica de la calidad de las imágenes para su almacenamiento y consulta.",
+        "habilidadesUsadas": "Gestión de archivos digitales, organización de información, digitalización de documentos e imágenes, atención al detalle."
     }
 ]}
