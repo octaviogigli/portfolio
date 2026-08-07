@@ -19,9 +19,9 @@ body {
 }
 
 .ng-valid:not(form).ng-touched {
-    border-left: 5px solid #42a948;
+    border: 2px solid #42a948;
 }
 
 .ng-invalid:not(form).ng-touched {
-    border-left: 5px solid #a94443;
+    border: 5px solid #a94443;
 }

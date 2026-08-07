@@ -9,8 +9,9 @@ export const routes: Routes = [
     {path: "sobremi", component:Sobremi},
     {path: "proyectos", component:Proyectos},
     {path: "contacto", component:Contacto},
+    {path:  "", redirectTo: "inicio",pathMatch: 'full'},
     {path: "inicio", component:Inicio},
-    {path: "", component:Register}
+    {path: "registro", component:Register}
 
 ];
 
