@@ -1,0 +1,56 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card shadow-sm p-4" style="width: 100%; max-width: 450px;">
+        <h3 class="text-center mb-4">Registro</h3>
+
+        <form id="registroForm" [formGroup]="registerform" (ngSubmit)="registrarUsuario()">
+
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingresá tu nombre"
+                    formControlName="nombre">
+
+
+                @if(Nombre?.invalid && (Nombre!.dirty || Nombre!.touched)) {
+                <div class="text-danger">Por favor ingresá tu nombre.</div>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com"
+                    formControlName="email">
+
+                @if (Email?.invalid && (Email!.touched)) {
+                @if (Email?.hasError("required")){
+                <div class="text-danger">Ingresá un email válido.</div>
+                }
+                @if (Email?.hasError("email")) {
+                <div class="text-danger">El formato del email deber ser valido</div>
+                }
+                }
+
+
+            </div>
+
+            <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena" placeholder="Mínimo 6 caracteres"
+                    formControlName="contrasena">
+                @if(Contrasena?.invalid && (Contrasena!.dirty || Contrasena!.touched)) {
+                <div class="text-danger">La contraseña debe tener al menos 6 caracteres.</div>
+                }
+            </div>
+
+            <div class="mb-3">
+                <label for="verificarContrasena" class="form-label">Verificar contraseña</label>
+                <input type="password" class="form-control" id="verificarContrasena" placeholder="Repetí tu contraseña"
+                    formControlName="verificarContrasena">
+                @if(VerificarContrasena?.invalid && (VerificarContrasena!.dirty || VerificarContrasena!.touched)) {
+                <div class="text-danger" id="verificarFeedback">Las contraseñas no coinciden.</div>
+                }
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+
+        </form>
+    </div>
+</div>
