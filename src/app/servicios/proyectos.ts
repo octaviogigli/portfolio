@@ -6,9 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ProyectosService {
-  private urlApi:string ="http://localhost:3000/Projects";
 
-  constructor(private http:HttpClient) {
+  private urlApi: string = "http://localhost:3000/Projects";
+
+  constructor(private http: HttpClient) {
 
   }
 
@@ -18,7 +19,12 @@ export class ProyectosService {
 
   }
 
+  crearProyecto(proyecto: any) {
+
+    return this.http.post(this.urlApi, proyecto);
 
   }
+
+}
 
  

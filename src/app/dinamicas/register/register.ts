@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { AbstractControl, FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { email } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +12,7 @@ export class Register {
   registerform = this.formBuilder.group({
     nombre: ['', [Validators.required]],
     contrasena: ['', [Validators.required, Validators.minLength(6)]],
-    email: ['pedro@yahoo.com', [Validators.required, Validators.email]],
+    email: ['', [Validators.required, Validators.email]],
     verificarContrasena: ['', [Validators.required, Validators.minLength(6)]]
   })
   get Nombre() {
@@ -26,7 +25,7 @@ export class Register {
     return this.registerform.get("contrasena")
   }
   get VerificarContrasena() {
-    return this.registerform.get("verificarcontrasena")
+    return this.registerform.get("verificarContrasena")
   }
   registrarUsuario() {
     if (this.registerform.valid) {

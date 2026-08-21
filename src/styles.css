@@ -1,14 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-/* ---- COLORES: definí tus colores en variables ---- */
 :root {
     --color-primario: #7f77dd;
-    /* violeta */
     --color-fondo: #16213e;
-    /* azul oscuro */
     --color-texto: #e0e0ff;
-    /* blanco suave */
     --color-gris: #9999cc;
-    /* texto secundario */
 }
 
 

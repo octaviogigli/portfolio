@@ -1,0 +1,13 @@
+<form [FormGroup]="proyectoForm" (ngsubmit)="handlesubmit()">
+  <fieldset>
+    <label for="proyecto-titulo">Titulo:</label>
+    <input type="text id="Titulo" formControlName="titulo">
+  </fieldset>
+   <label for="proyecto-descripcion">Descripción:</label>
+    <input type="text id="descripcion" formControlTitulo="descripcion">
+  </fieldset>
+   <label for="proyecto-habilidades">Habilidades puestas en práctica:</label>
+    <input type="text id="habilidades" formControlTitulo="habilidadesUsadas">
+  </fieldset>
+  <button>Subir proyecto</button>
+</form>

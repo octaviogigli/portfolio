@@ -1,10 +1,93 @@
-<h1>Mis proyectos recientes: </h1>
-<section>
-  @for (proyectos of proyectosList; track proyectos.id) {
+<section class="proyectos">
 
-    <h2>{{proyectos.titulo}}</h2>
-    <p>{{proyectos.descripcion}}</p>
-    <h4>Habilidades puestas en practica: </h4>
-    <p>{{proyectos.habilidadesUsadas}}</p>
-  }
+  <h1>Mis proyectos recientes</h1>
+
+  <div class="lista-proyectos">
+
+    @for (proyectos of proyectosList; track proyectos.id) {
+
+      <article class="proyecto">
+
+        <h2>{{ proyectos.titulo }}</h2>
+
+        <p class="descripcion">
+          {{ proyectos.descripcion }}
+        </p>
+
+        <div class="habilidades">
+
+          <h4>Habilidades puestas en práctica:</h4>
+
+          <p>{{ proyectos.habilidadesUsadas }}</p>
+
+        </div>
+
+      </article>
+
+    }
+
+  </div>
+
+</section>
+
+
+<section class="formulario">
+
+  <h1>Subir nuevo proyecto</h1>
+
+  <form [formGroup]="proyectoForm" (ngSubmit)="handleSubmit()">
+
+    <div class="campo">
+
+      <label for="proyecto-titulo">
+        Título
+      </label>
+
+      <input
+        type="text"
+        id="proyecto-titulo"
+        formControlName="titulo"
+        placeholder="Ej: Mi aplicación web"
+      >
+
+    </div>
+
+
+    <div class="campo">
+
+      <label for="proyecto-descripcion">
+        Descripción
+      </label>
+
+      <textarea
+        id="proyecto-descripcion"
+        formControlName="descripcion"
+        placeholder="Contá brevemente de qué trata tu proyecto"
+      ></textarea>
+
+    </div>
+
+
+    <div class="campo">
+
+      <label for="proyecto-habilidades">
+        Habilidades puestas en práctica
+      </label>
+
+      <input
+        type="text"
+        id="proyecto-habilidades"
+        formControlName="habilidadesUsadas"
+        placeholder="Ej: Angular, TypeScript, HTML, CSS"
+      >
+
+    </div>
+
+
+    <button type="submit">
+      Subir proyecto
+    </button>
+
+  </form>
+
 </section>

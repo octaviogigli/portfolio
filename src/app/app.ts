@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Footer } from './estaticas/footer/footer';
 import { Header } from './estaticas/header/header';
@@ -10,5 +10,5 @@ import { Header } from './estaticas/header/header';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('proyecto1');
+
 }
