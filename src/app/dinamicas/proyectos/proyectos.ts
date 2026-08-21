@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ProyectosService } from '../../servicios/proyectos';
 
 @Component({
@@ -23,9 +23,18 @@ export class Proyectos {
     private proyectosService: ProyectosService,
     private cdr: ChangeDetectorRef
   ) {
-    this.titulo = new FormControl('');
-    this.descripcion = new FormControl('');
-    this.habilidadesUsadas = new FormControl('');
+    this.titulo = new FormControl('', [
+        Validators.required,
+        Validators.minLength(3)
+    ]);
+    this.descripcion = new FormControl('', [
+      Validators.required,
+      Validators.minLength(10)
+    ]);
+    this.habilidadesUsadas = new FormControl('', [
+  Validators.required,
+  Validators.minLength(2)
+]);
 
     this.proyectoForm = new FormGroup({
       titulo: this.titulo,
@@ -45,28 +54,33 @@ export class Proyectos {
 
   handleSubmit(): void {
 
-    console.log(this.proyectoForm.value);
-
-    this.proyectosService.crearProyecto(this.proyectoForm.value).subscribe({
-
-      next: (data) => {
-        console.log('Proyecto creado:', data);
-
-        this.proyectosService.obteneProjectos().subscribe({
-          next: (data) => {
-            this.proyectosList = data;
-            this.cdr.detectChanges();
-          }
-        });
-        this.proyectoForm.reset();
-      },
-
-      error: (error) => {
-        console.error('Error al crear el proyecto:', error);
-      }
-
-    });
-
+  if (this.proyectoForm.invalid) {
+    this.proyectoForm.markAllAsTouched();
+    return;
   }
 
+  this.proyectosService.crearProyecto(this.proyectoForm.value).subscribe({
+
+    next: (data) => {
+
+      console.log('Proyecto creado:', data);
+
+      this.proyectosService.obteneProjectos().subscribe({
+        next: (data) => {
+          this.proyectosList = data;
+          this.cdr.detectChanges();
+        }
+      });
+
+      this.proyectoForm.reset();
+
+    },
+
+    error: (error) => {
+      console.error('Error al crear el proyecto:', error);
+    }
+
+  });
+
 }
+    };

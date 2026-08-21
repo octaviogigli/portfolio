@@ -1,13 +1,125 @@
-<form [FormGroup]="proyectoForm" (ngsubmit)="handlesubmit()">
+<h1>Subir nuevo proyecto</h1>
+
+<form [formGroup]="proyectoForm" (ngSubmit)="handleSubmit()">
+
   <fieldset>
-    <label for="proyecto-titulo">Titulo:</label>
-    <input type="text id="Titulo" formControlName="titulo">
+
+    <div class="campo">
+
+      <label for="proyecto-titulo">
+        Título
+      </label>
+
+      <input
+        type="text"
+        id="proyecto-titulo"
+        formControlName="titulo"
+        placeholder="Ej: Mi aplicación web"
+      >
+
+      @if (
+        proyectoForm.get('titulo')?.invalid &&
+        proyectoForm.get('titulo')?.touched
+      ) {
+
+        <p class="error">
+
+          @if (proyectoForm.get('titulo')?.errors?.['required']) {
+            El título es obligatorio.
+          }
+
+          @if (proyectoForm.get('titulo')?.errors?.['minlength']) {
+            El título debe tener al menos 3 caracteres.
+          }
+
+        </p>
+
+      }
+
+    </div>
+
   </fieldset>
-   <label for="proyecto-descripcion">Descripción:</label>
-    <input type="text id="descripcion" formControlTitulo="descripcion">
+
+
+  <fieldset>
+
+    <div class="campo">
+
+      <label for="proyecto-descripcion">
+        Descripción
+      </label>
+
+      <textarea
+        id="proyecto-descripcion"
+        formControlName="descripcion"
+        placeholder="Contá brevemente de qué trata tu proyecto"
+      ></textarea>
+
+      @if (
+        proyectoForm.get('descripcion')?.invalid &&
+        proyectoForm.get('descripcion')?.touched
+      ) {
+
+        <p class="error">
+
+          @if (proyectoForm.get('descripcion')?.errors?.['required']) {
+            La descripción es obligatoria.
+          }
+
+          @if (proyectoForm.get('descripcion')?.errors?.['minlength']) {
+            La descripción debe tener al menos 10 caracteres.
+          }
+
+        </p>
+
+      }
+
+    </div>
+
   </fieldset>
-   <label for="proyecto-habilidades">Habilidades puestas en práctica:</label>
-    <input type="text id="habilidades" formControlTitulo="habilidadesUsadas">
+
+
+  <fieldset>
+
+    <div class="campo">
+
+      <label for="proyecto-habilidades">
+        Habilidades puestas en práctica
+      </label>
+
+      <input
+        type="text"
+        id="proyecto-habilidades"
+        formControlName="habilidadesUsadas"
+        placeholder="Ej: Angular, TypeScript, HTML, CSS"
+      >
+
+      @if (
+        proyectoForm.get('habilidadesUsadas')?.invalid &&
+        proyectoForm.get('habilidadesUsadas')?.touched
+      ) {
+
+        <p class="error">
+
+          @if (proyectoForm.get('habilidadesUsadas')?.errors?.['required']) {
+            Las habilidades son obligatorias.
+          }
+
+          @if (proyectoForm.get('habilidadesUsadas')?.errors?.['minlength']) {
+            Debe ingresar al menos 2 caracteres.
+          }
+
+        </p>
+
+      }
+
+    </div>
+
   </fieldset>
-  <button>Subir proyecto</button>
+
+
+  <button type="submit">
+    Subir proyecto
+  </button>
+
 </form>
